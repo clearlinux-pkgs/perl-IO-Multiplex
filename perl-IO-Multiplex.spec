@@ -4,11 +4,11 @@
 #
 Name     : perl-IO-Multiplex
 Version  : 1.16
-Release  : 9
+Release  : 10
 URL      : https://cpan.metacpan.org/authors/id/B/BB/BBB/IO-Multiplex-1.16.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BB/BBB/IO-Multiplex-1.16.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libi/libio-multiplex-perl/libio-multiplex-perl_1.16-1.debian.tar.xz
-Summary  : Manage IO on many file handles
+Summary  : Perl/CPAN Module IO::Multiplex : Manage Input Output on many file handles
 Group    : Development/Tools
 License  : Artistic-1.0 GPL-1.0
 Requires: perl-IO-Multiplex-license = %{version}-%{release}
@@ -25,6 +25,7 @@ can also accept incoming connections on one or more listen sockets.
 Summary: dev components for the perl-IO-Multiplex package.
 Group: Development
 Provides: perl-IO-Multiplex-devel = %{version}-%{release}
+Requires: perl-IO-Multiplex = %{version}-%{release}
 
 %description dev
 dev components for the perl-IO-Multiplex package.
@@ -43,7 +44,7 @@ license components for the perl-IO-Multiplex package.
 cd ..
 %setup -q -T -D -n IO-Multiplex-1.16 -b 1
 mkdir -p deblicense/
-mv %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/IO-Multiplex-1.16/deblicense/
+cp -r %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/IO-Multiplex-1.16/deblicense/
 
 %build
 export http_proxy=http://127.0.0.1:9/
