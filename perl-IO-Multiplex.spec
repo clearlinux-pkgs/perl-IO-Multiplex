@@ -4,7 +4,7 @@
 #
 Name     : perl-IO-Multiplex
 Version  : 1.16
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/B/BB/BBB/IO-Multiplex-1.16.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BB/BBB/IO-Multiplex-1.16.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libi/libio-multiplex-perl/libio-multiplex-perl_1.16-1.debian.tar.xz
@@ -80,7 +80,7 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-IO-Multiplex
-cp %{_builddir}/IO-Multiplex-1.16/deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-IO-Multiplex/95eed1ccc194bb51721fc7d3ae76582fb7340504
+cp %{_builddir}/debian/copyright %{buildroot}/usr/share/package-licenses/perl-IO-Multiplex/95eed1ccc194bb51721fc7d3ae76582fb7340504
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -104,4 +104,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/IO/Multiplex.pm
+/usr/lib/perl5/vendor_perl/5.30.2/IO/Multiplex.pm
