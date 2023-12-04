@@ -4,7 +4,7 @@
 #
 Name     : perl-IO-Multiplex
 Version  : 1.16
-Release  : 25
+Release  : 26
 URL      : https://cpan.metacpan.org/authors/id/B/BB/BBB/IO-Multiplex-1.16.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BB/BBB/IO-Multiplex-1.16.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libi/libio-multiplex-perl/libio-multiplex-perl_1.16-1.debian.tar.xz
